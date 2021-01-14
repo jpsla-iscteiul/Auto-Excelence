@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contact</title>
+	
+<!--Icon-->
+<link rel="icon" href="images/icons/car_icon.png">
+<!--CSS Style Sheets-->
+	
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+<!--Bootstrap Scripts--> 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+<script type="text/javascript">
+    var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
+
+    function InitializeMap() {
+      directionsDisplay = new google.maps.DirectionsRenderer();
+      var latlng = new google.maps.LatLng(38.752805, -9.219249);
+      var myOptions = {
+        zoom: 8,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("map"), myOptions);
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementById('directionpanel'));
+      var control = document.getElementById('control');
+      control.style.display = 'block';
+    }
+    window.onload = InitializeMap;
+  </script>
+</head>
+
+<body>
+<div id="header">
+  <nav class="navbar navbar-bg-color navbar-light navbar-expand-lg"> <a class="navbar-brand" href="">Auto-Excelence</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> <a class="nav-link" href="index.html">Homepage</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="services.html">Services</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="contact.html">Contacts</a> </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<div id="contacts-container">
+  <div class="row contact-row">
+    <div class="col-lg-6">
+      <div class="card-header bg-white border-dark">
+        <h4>Contact Form</h4>
+      </div>
+      <form action="mailto:7080059@formacao.iefp.pt" method="post" enctype="text/plain">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm-2">
+              <label id="Lbl_Name"> Name: </label>
+            </div>
+            <div class="col-sm-9 col-lg-10">
+              <input type="text" name="Name" placeholder="Write your name here" size="30" required>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-2">
+              <label id="Lbl_Email">Email:</label>
+            </div>
+            <div class="col-sm-8 col-lg-10">
+              <input type="email" name="Email" placeholder="Write your email here" size="30" required>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-2">
+              <label ID="Lbl_Subject">Subject:</label>
+            </div>
+            <div class="col-sm-8 col-lg-10">
+              <input type="text" name="Subject" placeholder="Write your subject here" size="30" required>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col-sm-2">
+              <label id="Lbl_Message">Message:</label>
+            </div>
+            <div class="col-sm-8">
+              <textarea id="input-box" name="Message" rows="8" cols="40" placeholder="Write your message here" required></textarea>
+            </div>
+          </div>
+          <div class="row mt-2">
+            <input id="Btn_Send" type="submit" class="btn-dark btn-sm" value="Enviar">
+            <input id="Btn_Reset" type="reset" class="btn-dark btn-sm" value="Reset">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-6">
+      <div class="card-header bg-white border-dark">
+        <h4>Location</h4>
+      </div>
+      <div class="card-body">
+        <div>
+          <p> Rua Latino Coelho 10, 2704-503<br />
+            +351 21 580 23 20 </p>
+        </div>
+        <div id="map" style="width: 400px; height: 300px;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row mx-auto justify-content-center">
+  <div class="col-lg-2"> <a href="https://www.bmw.pt/" target="_blank" ><img class="brand-img-bmw" src="images/bmw.png" width="150" height="110" alt="car-brand"></a> </div>
+  <div class="col-lg-2"> <a href="https://www.fiat.pt/" target="_blank"><img class="brand-img" src="images/fiat.png"  width="150" height="120" alt="car-brand"></a> </div>
+  <div class="col-lg-2"> <a href="https://www.ford.pt/" target="_blank"><img class="brand-img" src="images/ford.png" width="150" height="120" alt="car-brand"></a> </div>
+  <div class="col-lg-2"> <a href="https://honda-automoveis.pt/" target="_blank"><img class="brand-img-honda" src="images/honda.png"  width="160" height="110" alt="car-brand"></a> </div>
+  <div class="col-lg-2"> <a href="https://www.hyundai.pt/" target="_blank"><img class="brand-img-hyundai" src="images/hyundai.png" width="170" height="80" alt="car-brand"></a></div>
+</div>
+<footer class="page-footer font-small footer-bg-color">
+  <div class="footer-copyright text-center py-3"> © 2020 Copyright: Auto-Excelence.net </div>
+</footer>
+</body>
+</html>

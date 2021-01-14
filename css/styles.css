@@ -1,0 +1,59 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+  font-size: 22px;
+}
+.navbar-brand {
+  font-size: 32px;
+}
+.nav-link {
+  font-size: 22px;
+}
+.navbar-bg-color {
+  background-color: #bbbfca;
+}
+.footer-bg-color {
+  background-color: #bbbfca;
+}
+#cars-container {
+  margin: 20px auto;
+}
+.cars-row {
+  margin: 10px auto;
+  width: 80%;
+}
+.brand-img {
+  display: block;
+  margin: auto;
+}
+.brand-img-bmw {
+  display: block;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.brand-img-honda {
+  display: block;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.brand-img-hyundai {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-copyright {
+  font-size: 18px;
+}
+#services-container {
+  margin: 20px auto;
+}
+.services-row {
+  margin: 10px auto;
+  justify-content: center;
+}
+.contact-row {
+  margin: 10px auto;
+  width: 80%;
+}
